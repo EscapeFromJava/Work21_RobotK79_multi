@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <string>
 #include <vector>
 
@@ -36,11 +36,11 @@ struct ERobot {
 ERobot inputRobot(int field[SIZE][SIZE], int i)
 {
     ERobot rob;
-    cout << "Ââåäèòå êîîðäèíàòû " << i + 1 << " ðîáîòà ïî îñè \"x\" è \"ó\": ";
+    cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð¾Ñ€Ð´Ð¸Ð½Ð°Ñ‚Ñ‹ " << i + 1 << " Ñ€Ð¾Ð±Ð¾Ñ‚Ð° Ð¿Ð¾ Ð¾ÑÐ¸ \"x\" Ð¸ \"Ñƒ\": ";
     cin >> rob.coord.x >> rob.coord.y;
     field[rob.coord.x][rob.coord.y] = 7;
     rob.history.push_back(rob.coord);
-    cout << "Ââåäèòå ìàðøðóò " << i + 1 << " ðîáîòà: ";
+    cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¼Ð°Ñ€ÑˆÑ€ÑƒÑ‚ " << i + 1 << " Ñ€Ð¾Ð±Ð¾Ñ‚Ð°: ";
     cin >> rob.program;
     return rob;
 }
@@ -122,9 +122,9 @@ void minDistanceBetweenRobots(vector<ERobot> vec, int numberOfRobots, int rob1, 
             }
         }
     }
-    cout << "Ìèíèìàëüíîå ðàññòîÿíèå ìåæäó " << rob1 + 1 << " ðîáîòîì è " << rob2 + 1 << " ðîáîòîì  = " << temp_dis << endl;
-    cout << "Ðîáîò " << rob1 + 1 << " íàõîäèëñÿ â êîîðäèíàòàõ: x = " << nearest_x1 << " y = " << nearest_y1 << " è ñîâåðøèë â ýòîò ìîìåíò " << stepRob1 << " øàãîâ" << endl;
-    cout << "Ðîáîò " << rob2 + 1 << " íàõîäèëñÿ â êîîðäèíàòàõ: x = " << nearest_x2 << " y = " << nearest_y2 << " è ñîâåðøèë â ýòîò ìîìåíò " << stepRob2 << " øàãîâ" << endl;
+    cout << "ÐœÐ¸Ð½Ð¸Ð¼Ð°Ð»ÑŒÐ½Ð¾Ðµ Ñ€Ð°ÑÑÑ‚Ð¾ÑÐ½Ð¸Ðµ Ð¼ÐµÐ¶Ð´Ñƒ " << rob1 + 1 << " Ñ€Ð¾Ð±Ð¾Ñ‚Ð¾Ð¼ Ð¸ " << rob2 + 1 << " Ñ€Ð¾Ð±Ð¾Ñ‚Ð¾Ð¼  = " << temp_dis << endl;
+    cout << "Ð Ð¾Ð±Ð¾Ñ‚ " << rob1 + 1 << " Ð½Ð°Ñ…Ð¾Ð´Ð¸Ð»ÑÑ Ð² ÐºÐ¾Ð¾Ñ€Ð´Ð¸Ð½Ð°Ñ‚Ð°Ñ…: x = " << nearest_x1 << " y = " << nearest_y1 << " Ð¸ ÑÐ¾Ð²ÐµÑ€ÑˆÐ¸Ð» Ð² ÑÑ‚Ð¾Ñ‚ Ð¼Ð¾Ð¼ÐµÐ½Ñ‚ " << stepRob1 << " ÑˆÐ°Ð³Ð¾Ð²" << endl;
+    cout << "Ð Ð¾Ð±Ð¾Ñ‚ " << rob2 + 1 << " Ð½Ð°Ñ…Ð¾Ð´Ð¸Ð»ÑÑ Ð² ÐºÐ¾Ð¾Ñ€Ð´Ð¸Ð½Ð°Ñ‚Ð°Ñ…: x = " << nearest_x2 << " y = " << nearest_y2 << " Ð¸ ÑÐ¾Ð²ÐµÑ€ÑˆÐ¸Ð» Ð² ÑÑ‚Ð¾Ñ‚ Ð¼Ð¾Ð¼ÐµÐ½Ñ‚ " << stepRob2 << " ÑˆÐ°Ð³Ð¾Ð²" << endl;
 }
 
 void printField(int field[SIZE][SIZE])
@@ -145,7 +145,7 @@ int main()
     int numberOfRobots;
     int field[SIZE][SIZE] = { 0 };
 
-    cout << "Ââåäèòå êîëè÷åñòâî ðîáîòîâ: ";
+    cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ Ñ€Ð¾Ð±Ð¾Ñ‚Ð¾Ð²: ";
     cin >> numberOfRobots;
 
     vector <ERobot> robVector;
